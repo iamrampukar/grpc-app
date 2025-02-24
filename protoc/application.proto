@@ -1,0 +1,21 @@
+syntax = "proto3";
+option php_namespace = "App\\Proto";
+// option php_metadata_namespace = "App\\Proto\\GBPMetadata";
+option php_metadata_namespace = "App\\Proto\\GPBMetadata";
+
+
+message BaseModel {
+   optional uint64 id = 1;
+   optional string created_at = 2;
+   optional string updated_at = 3;
+}
+
+message Person {
+    optional BaseModel base_model = 1;
+    optional string name = 2;
+}
+
+message People {
+    repeated Person people = 1;
+    optional string name = 2;
+}

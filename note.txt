@@ -6,4 +6,18 @@
 	D:\wampserver64\www\yig2023\yonefu-io\protoc-29.3\bin
 
 [run app cli]
-	php -S localhost:8000 -t public 
+	php -S localhost:8000 -t public  
+
+
+[https://github.com/drslump/Protobuf-PHP]
+	protoc --plugin=protoc-gen-php --php_out=./build tutorial.proto
+	Eg. 
+		grpc-app\protoc\gen-proto.sh
+		protoc --proto_path=. --php_out=. ./application.proto
+
+[run cli]
+	...\grpc-app\protoc
+		-- $ ./gen-proto.sh
+
+[google/protobuf]
+	https://packagist.org/packages/google/protobuf
