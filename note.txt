@@ -4,3 +4,6 @@
 
 [download path config]
 	D:\wampserver64\www\yig2023\yonefu-io\protoc-29.3\bin
+
+[run app cli]
+	php -S localhost:8000 -t public 
