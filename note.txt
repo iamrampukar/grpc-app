@@ -1,1 +1,6 @@
-Lumen v1
+
+[Ref. Protoc]
+	https://github.com/protocolbuffers/protobuf/releases
+
+[download path config]
+	D:\wampserver64\www\yig2023\yonefu-io\protoc-29.3\bin
