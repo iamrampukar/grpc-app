@@ -22,6 +22,10 @@ class Person extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string name = 2;</code>
      */
     protected $name = null;
+    /**
+     * Generated from protobuf field <code>optional string address = 3;</code>
+     */
+    protected $address = null;
 
     /**
      * Constructor.
@@ -31,6 +35,7 @@ class Person extends \Google\Protobuf\Internal\Message
      *
      *     @type \App\Proto\BaseModel $base_model
      *     @type string $name
+     *     @type string $address
      * }
      */
     public function __construct($data = NULL) {
@@ -98,6 +103,38 @@ class Person extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string address = 3;</code>
+     * @return string
+     */
+    public function getAddress()
+    {
+        return isset($this->address) ? $this->address : '';
+    }
+
+    public function hasAddress()
+    {
+        return isset($this->address);
+    }
+
+    public function clearAddress()
+    {
+        unset($this->address);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string address = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAddress($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->address = $var;
 
         return $this;
     }

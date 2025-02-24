@@ -58,6 +58,7 @@ $router->get('/proto-people-v1', function () use ($router) {
                 return $bm;
             })());
             $p->setName('Ram Pukar v1');
+            $p->setAddress('Saptri');
             return $p;
         })(),
         (function() {
@@ -68,11 +69,23 @@ $router->get('/proto-people-v1', function () use ($router) {
                 return $bm;
             })());
             $p->setName('Ram Pukar v2');
+            $p->setAddress('Malhaniya');
             return $p;
         })(),
     ]);
 
     
     return response($people->serializeToJsonString())
+    ->header('content-type','application/json');
+});
+
+
+$router->get('/proto-parse', function () use ($router) {
+    $p = new Person;
+    $p->mergeFromJsonString('{
+        "name":"Ram Pukar"
+    }');
+
+    return response($p->serializeToJsonString())
     ->header('content-type','application/json');
 });

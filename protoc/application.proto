@@ -13,6 +13,7 @@ message BaseModel {
 message Person {
     optional BaseModel base_model = 1;
     optional string name = 2;
+    optional string address = 3;
 }
 
 message People {
